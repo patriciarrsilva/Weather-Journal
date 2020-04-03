@@ -7,9 +7,7 @@ const performAction = () => {
 
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},us&appid=${apiKey}`;
 
-  getData(apiUrl).then(data => {
-    console.log('Data from weather API: ', data);
-
+  getData(apiUrl).then((data) => {
     // Create a new date instance dynamically with JS
     let d = new Date();
     let newDate = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
@@ -17,7 +15,7 @@ const performAction = () => {
     postData('/add', {
       temperature: data.main.temp,
       date: newDate,
-      userResponse: feelings
+      userResponse: feelings,
     });
   });
 
@@ -26,12 +24,11 @@ const performAction = () => {
 
 document.getElementById('generate').addEventListener('click', performAction);
 
-const getData = async url => {
+const getData = async (url) => {
   const response = await fetch(url);
 
   try {
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
     console.log('Error: ', error);
@@ -39,11 +36,10 @@ const getData = async url => {
 };
 
 const postData = async (url = '', data = {}) => {
-  console.log('Data passed to POST on Express', data);
   const response = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   });
 
   try {
