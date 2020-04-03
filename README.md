@@ -8,7 +8,7 @@ A [starter project](https://github.com/udacity/fend/tree/refresh-2019/projects/w
 
 - [Express](https://expressjs.com/) - runs a local server.
 - CORS package - allows for communication across the web.
-- Body-Parser package (middleware) - allows parsing the data passed through routes on our local Express server.
+- Body-Parser package (middleware) - allows parsing the data passed through routes on the local Express server.
 
 ## Quickstart
 
