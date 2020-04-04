@@ -17,9 +17,9 @@ const performAction = () => {
       date: newDate,
       userResponse: feelings,
     });
-  });
 
-  updateUI();
+    updateUI();
+  });
 };
 
 document.getElementById('generate').addEventListener('click', performAction);

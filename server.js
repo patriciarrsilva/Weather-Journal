@@ -41,4 +41,6 @@ app.post('/add', (req, res) => {
   projectData.temperature = req.body.temperature;
   projectData.date = req.body.date;
   projectData.userResponse = req.body.userResponse;
+
+  res.send(projectData);
 });
