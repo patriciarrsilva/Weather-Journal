@@ -14,6 +14,6 @@ A [starter project](https://github.com/udacity/fend/tree/refresh-2019/projects/w
 
 To see it:
 
-- download the zip or clone the directory to your computer and, from inside the directory, install the depedencies with `npm i` and start the server with `node server.js`.
+- download the zip or clone the directory to your computer and, from inside the directory, install the depedencies with `npm i`, start the server with `node server.js` and open the page on a web browser on `http://localhost:8000/`.
 
 > #**MadeWithUdacity**
